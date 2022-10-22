@@ -8,13 +8,14 @@ import { addToBasket } from '../slices/basketSlice';
 const MAX_RATING = 5;
 const MIN_RATING = 1;
 
-function Product({ id, title, price, description, category, image }) {
+function Product({ id, title, price, description, category, image, rating }) {
     const dispatch = useDispatch();
 
     const [hasPrime] = useState(Math.random() < 0.5);
-    const [rating] = useState(
-        Math.floor(Math.random() * (MAX_RATING - MIN_RATING + 1)) + MIN_RATING
-    );
+    
+    // const [rating] = useState(
+    //     Math.floor(Math.random() * (MAX_RATING - MIN_RATING + 1)) + MIN_RATING
+    // );
 
     const addItemToBasket = () => {
         const product = {
