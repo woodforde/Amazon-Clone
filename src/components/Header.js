@@ -2,13 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import { useRouter } from 'next/router'; // Next JS routing
+import { useSelector } from 'react-redux';
+import { selectItems } from '../slices/basketSlice';
 import {
     Bars3Icon as MenuIcon,
     MagnifyingGlassIcon as SearchIcon,
     ShoppingCartIcon,
 } from '@heroicons/react/24/outline';
-import { useSelector } from 'react-redux';
-import { selectItems } from '../slices/basketSlice';
 
 function Header() {
     const { data: session } = useSession();
