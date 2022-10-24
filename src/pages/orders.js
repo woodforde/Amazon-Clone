@@ -20,7 +20,7 @@ function Orders({ orders }) {
             { session ? (
                 <h2>{orders.length} orders</h2>
             ) : (
-                <h2>PLease sign in to see your orders</h2>
+                <h2>Please sign in to see your orders</h2>
             )}
 
             <div className="mt-5 space-y-4">
@@ -79,6 +79,7 @@ export async function getServerSideProps(context) {
     return {
         props: {
             orders,
+            session,
         }
     }
 }
