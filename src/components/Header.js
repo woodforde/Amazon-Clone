@@ -46,7 +46,10 @@ function Header() {
                     <p>{ session ? `Hello, ${session.user.name}` : 'Sign in'}</p>
                     <p className="font-extrabold md:text-sm">Account & Lists</p>
                 </div>
-                <div onClick={ () => router.push('/orders') } className="link">
+                <div 
+                    onClick={ () => router.push('/orders') }
+                    className="link"
+                >
                     <p>Returns</p>
                     <p className="font-extrabold md:text-sm">& Orders</p>
                 </div>

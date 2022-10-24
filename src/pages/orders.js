@@ -7,10 +7,7 @@ import Order from '../components/Order';
 
 function Orders({ orders }) {
     const { data: session } = useSession();
-
-    console.log(orders)
-
-
+    // console.log(orders)
   return (
     <div>
         <Header />
