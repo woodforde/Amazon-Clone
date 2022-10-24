@@ -10,7 +10,7 @@ const firebaseConfig = {
 };
 
 // const app = firebase.initializeApp(firebaseConfig);
-const app = !firebase.app.length
+const app = !firebase.apps.length
     ? firebase.initializeApp(firebaseConfig)
     : firebase.app();
 
